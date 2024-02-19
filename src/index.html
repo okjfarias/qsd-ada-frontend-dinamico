@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedra, papel e tesoura</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="h-14 bg-green-900 flex justify-center items-center">
+      <span class="font-mono font-bold text-lg text-gray-100"
+        >Pedra, papel e tesoura</span
+      >
+    </header>
+    <main>
+      <!-- Pontuação -->
+      <div class="flex justify-evenly font-mono">
+        <div class="items-center mt-5 mb-5 ml-10 mr-10">
+          <span class="font-bold">Computador</span>
+          <p id="pontos-computador">Pontos: 0</p>
+        </div>
+        <div class="mt-5 mb-5 ml-10 mr-10">
+          <span class="font-bold">Player</span>
+          <p id="pontos-jogador">Pontos: 0</p>
+        </div>
+      </div>
+
+      <!-- Escolhas -->
+      <h2 class="font-mono font-bold text-xl flex justify-center mt-10">
+        Escolha uma opção e jogue!
+      </h2>
+      <div id="mensagem"></div>
+      <div class="md:flex sm:justify-center sm:items-center mt-10">
+        <img
+          class="cursor-pointer hover:w-1/5"
+          id="pedra"
+          src="../img/pedra.png"
+          alt="Pedra"
+        />
+        <img
+          class="cursor-pointer hover:w-1/5"
+          id="papel"
+          src="../img/papel.png"
+          alt="Papel"
+        />
+        <img
+          class="cursor-pointer hover:w-1/5"
+          id="tesoura"
+          src="../img/tesoura.png"
+          alt="Tesoura"
+        />
+      </div>
+    </main>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
