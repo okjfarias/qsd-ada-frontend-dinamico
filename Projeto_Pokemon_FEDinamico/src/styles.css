@@ -7,8 +7,7 @@
 }
 
 body {
-  background: url("../img/pokemon-pattern-bg-3-ezgif.com-video-to-gif-converter\ \(1\).gif")
-    no-repeat center fixed;
+  background: url("../img/pokemon-pattern-bg.gif") no-repeat center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
