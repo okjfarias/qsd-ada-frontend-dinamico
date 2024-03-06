@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <img src="../img/International_Pokémon_logo.svg" alt="" />
+    </header>
+    <main>
+      <form class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Qual Pokémon você está procurando?"
+        />
+        <button id="search-button" type="submit">
+          <img src="../img/icon-pokeball-3.svg" alt="Search button" />
+        </button>
+      </form>
+      <section id="pokemon-result"></section>
+
+      <h2 id="pokedex-title">
+        <img src="../img/icon-pokeball-1.svg" alt="" />Pokedex
+      </h2>
+      <section class="pokedex-container"></section>
+    </main>
+    <script src="./script.js" defer></script>
+  </body>
+</html>

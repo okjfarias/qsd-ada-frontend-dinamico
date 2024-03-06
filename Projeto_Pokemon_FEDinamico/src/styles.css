@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", "sans-serif";
+}
+
+body {
+  background: url("../img/pokemon-pattern-bg-3-ezgif.com-video-to-gif-converter\ \(1\).gif")
+    no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+header {
+  background-color: #ee1515;
+  height: 4rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+header > img {
+  height: 80%;
+  padding: 0.25rem 1.5rem;
+}
+
+.search-container {
+  margin: 2rem 3rem;
+  position: relative;
+  width: 300px;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.452);
+}
+
+#search-input:focus {
+  outline-color: #b6b6b6;
+}
+
+#search-button {
+  position: absolute;
+  right: -12px;
+  top: 4px;
+  bottom: 10px;
+  background: #ee1515;
+  border-radius: 10px;
+  width: 28px;
+  height: 28px;
+  border: none;
+  cursor: pointer;
+}
+
+#search-button img {
+  filter: invert(100%) sepia(0%) saturate(7487%) hue-rotate(207deg)
+    brightness(112%) contrast(100%);
+  width: 20px;
+  height: 20px;
+}
+
+#pokemon-result {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 2rem;
+  box-sizing: border-box;
+  width: 230px;
+  height: 230px;
+  background: rgba(228, 34, 54, 0.58);
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  transition: all 0.5s;
+  user-select: none;
+  color: black;
+}
+
+.card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.card-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 10rem;
+  padding: 1rem;
+}
+
+.card-header > h3 {
+  color: white;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.374);
+  font-weight: 700;
+  border-bottom: 1px solid white;
+}
+
+.card-header > ul {
+  margin-top: 0.5rem;
+  list-style: none;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.bg-pokemon {
+  position: relative;
+  top: 2rem;
+  opacity: 10%;
+  transform: scale(1.2);
+}
+
+.sprite-pokemon {
+  position: relative;
+  bottom: 4rem;
+  transform: scale(1);
+}
+
+.type-pokemon {
+  margin-top: 0.5rem;
+  padding: 0.2rem;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: #1b70c4;
+  color: white;
+  font-weight: 700;
+  font-size: small;
+  width: 50px;
+  text-align: center;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.22);
+}
+
+.sec-type-pokemon {
+  margin-top: 0.5rem;
+  padding: 0.2rem;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: #1b70c4;
+  color: white;
+  font-weight: 700;
+  font-size: small;
+  width: 50px;
+  text-align: center;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.22);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.add-btn-card {
+  cursor: pointer;
+  width: 58px;
+  height: 22px;
+  padding: 0.2rem;
+  border-radius: 20px;
+  border-style: none;
+  background-color: #ee1515;
+  color: white;
+  font-weight: 700;
+  transition: all 0.2s;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.22);
+}
+
+.add-btn-card:hover {
+  border: 1.5px solid white;
+  transform: scale(1.1);
+}
+
+#pokedex-title {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-bottom: 0.2rem;
+  font-weight: 900;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.47);
+}
+
+#pokedex-title > img {
+  width: 20px;
+  margin-right: 5px;
+  filter: invert(15%) sepia(82%) saturate(6841%) hue-rotate(359deg)
+    brightness(101%) contrast(87%);
+}
+
+.pokedex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.remove-btn-card {
+  cursor: pointer;
+  width: 58px;
+  height: 22px;
+  padding: 0.2rem;
+  border: 1px solid rgb(159, 8, 8);
+  border-radius: 20px;
+  background-color: #ee1515;
+  color: white;
+  font-weight: 700;
+  font-size: 0.7rem;
+  transition: all 0.2s;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.22);
+}
+
+.remove-btn-card:hover {
+  border: 1.5px solid white;
+  transform: scale(1.1);
+}
